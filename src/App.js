@@ -7,13 +7,13 @@ import { StarsComponent } from './component/canvas/Stars';
 import { Header } from './component/lending/Header';
 import { Desire } from './component/lending/Desire';
 import { AccordionComponent } from './component/lending/Accordion';
+import { AllRights } from './component/lending/AllRights.jsx';
 
 import EarthDayMap from './assets/8k_earth_daymap.jpg'
 import EarthNormalMap from './assets/8k_earth_normal_map.jpg'
 import EarthSpecularyMap from './assets/8k_earth_specular_map.jpg'
 import EarthCloudsMap from './assets/8k_earth_clouds.jpg'
 import MarsDayMap from './assets/8k_mars.jpg'
-import { AllRights } from './component/lending/AllRights.jsx';
 
 const CanvasContainer = styled.div`
   width: 100%;
@@ -36,7 +36,7 @@ function App() {
       <Canvas>
         <Suspense fallback={null}>
           <StarsComponent />
-          <Planet PlanetDayMap={MarsDayMap} PlanetNormalMap={EarthNormalMap} PlanetSpecularyMap={EarthSpecularyMap} PlanetCloudsMap={false} />
+          <Planet PlanetDayMap={MarsDayMap} PlanetNormalMap={EarthNormalMap} PlanetSpecularyMap={EarthSpecularyMap} PlanetCloudsMap={EarthCloudsMap} />
         </Suspense>
       </Canvas>
       <Header />

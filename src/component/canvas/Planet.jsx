@@ -2,10 +2,9 @@ import React, { useRef } from 'react'
 import { TextureLoader } from 'three'
 import { useFrame, useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
-import noClouds from '../../assets/noClouds.jpg'
 
 export const Planet = ({PlanetDayMap, PlanetNormalMap, PlanetSpecularyMap, PlanetCloudsMap}) => {
-  const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(TextureLoader, [PlanetDayMap, PlanetNormalMap, PlanetSpecularyMap, noClouds ?? PlanetCloudsMap ])
+  const [colorMap, normalMap, specularMap, cloudsMap] = useLoader(TextureLoader, [PlanetDayMap, PlanetNormalMap, PlanetSpecularyMap, PlanetCloudsMap ])
 
   const earthRef = useRef()
   const cloudsRef = useRef()
